@@ -325,7 +325,7 @@ jobs:
           # 增加自己个性名称EAY
           sed -i "s/OpenWrt /EAY Compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" $ZZZ
           # 修改内核版本
-          sed -i 's/PATCHVER:=5.4/PATCHVER:=5.10/g' target/linux/x86/Makefile   
+          # sed -i 's/PATCHVER:=5.4/PATCHVER:=5.10/g' target/linux/x86/Makefile   
           sed -i 's/^[ \t]*//g' ./.config
           make defconfig
 
